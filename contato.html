@@ -11,4 +11,119 @@
 
 
     <title>Fiat</title>
+    <script>
+        // selecione o formulário
+        const form = document.querySelector('#my-form');
+    
+        // adicione um listener para o evento 'submit'
+        form.addEventListener('submit', (event) => {
+            // previne o comportamento padrão do formulário (recarregar a página)
+            event.preventDefault();
+    
+            // selecione os inputs do formulário
+            const nomeInput = document.querySelector('#nome');
+            const telefoneInput = document.querySelector('#telefone');
+            const dataInput = document.querySelector('#data');
+            const carrosSelect = document.querySelector('#carros');
+    
+            // salve as informações do formulário em um objeto
+            const formData = {
+                nome: nomeInput.value,
+                telefone: telefoneInput.value,
+                data: dataInput.value,
+                carros: carrosSelect.value
+            };
+    
+            // exiba a mensagem de registro
+            alert('Registro salvo com sucesso!');
+    
+            // redirecione para a página index.html
+            window.location.href = 'index.html';
+        });
+    </script>
+    
 </head>
+
+<header class="container-fluid">
+    <div class="row bg-dark py-2 px-3">
+        <div class="col-3">
+            <a class="navbar-brand" href="index.html">
+                <img style="max-height: 40px; min-height: 38px;" class="img-responsive mh-20"
+                    src="img/logo_header_hub_fiat.svg">
+            </a>
+        </div>
+        <div class="col-9">
+            <nav class="navbar navbar-expand-lg navbar-light float-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carros.html">Carros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <h2 class="text-center mb-4">Formulário Bootstrap</h2>
+
+                <form id="my-form">
+
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" class="form-control" id="telefone" placeholder="Digite o telefone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data:</label>
+                        <input type="date" class="form-control" id="data">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="carros">Modelos de carros Fiat:</label>
+                        <select class="form-control" id="carros">
+                            <option value="">Selecione um modelo</option>
+                            <option value="Uno">Uno</option>
+                            <option value="Mobi">Mobi</option>
+                            <option value="Argo">Argo</option>
+                            <option value="Toro">Toro</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
