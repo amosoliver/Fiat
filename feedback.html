@@ -1,11 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.css">
+<<<<<<< HEAD
     <title>Feedback</title>
+=======
+    <title>Meu Chatbot</title>
+    
+    <!-- Estilos personalizados -->
+    <style>
+        /* Posicionamento do botão */
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+    </style>
+>>>>>>> 980a74b1461c2326e0ce51bbfdfe26ad86c1e1e1
 </head>
 
 <body>
@@ -50,6 +65,30 @@
     </header>
     <h1>Meu Chatbot</h1>
     <iframe src="https://landbot.online/v3/H-1628315-X9GFIZ4QRU4YCN86/index.html" style="width: 100%; height: 500px;"></iframe>
+    
+    <!-- Botão flutuante -->
+    <button type="button" class="btn btn-primary floating-button" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel">Feedback</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Incluir conteúdo da página de feedback aqui -->
+                    <iframe src="feedback.html" style="width:100%; height:400px; border:0;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Incluir o Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
